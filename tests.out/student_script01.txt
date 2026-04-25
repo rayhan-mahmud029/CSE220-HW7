@@ -1,0 +1,2 @@
+execute_script: tests_aux/execute_script.c:7: main: Assertion `access(script, F_OK) == 0' failed.
+Aborted (core dumped)

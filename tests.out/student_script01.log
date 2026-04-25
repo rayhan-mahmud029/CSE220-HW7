@@ -1,0 +1,25 @@
+==10280== Memcheck, a memory error detector
+==10280== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==10280== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==10280== Command: ./bin/execute_script student_script01
+==10280== 
+execute_script: tests_aux/execute_script.c:7: main: Assertion `access(script, F_OK) == 0' failed.
+==10280== 
+==10280== Process terminating with default action of signal 6 (SIGABRT): dumping core
+==10280==    at 0x48FFB2C: __pthread_kill_implementation (pthread_kill.c:44)
+==10280==    by 0x48FFB2C: __pthread_kill_internal (pthread_kill.c:78)
+==10280==    by 0x48FFB2C: pthread_kill@@GLIBC_2.34 (pthread_kill.c:89)
+==10280==    by 0x48A627D: raise (raise.c:26)
+==10280==    by 0x48898FE: abort (abort.c:79)
+==10280==    by 0x488981A: __assert_fail_base.cold (assert.c:96)
+==10280==    by 0x489C516: __assert_fail (assert.c:105)
+==10280==    by 0x1093BF: main (execute_script.c:7)
+==10280== 
+==10280== HEAP SUMMARY:
+==10280==     in use at exit: 0 bytes in 0 blocks
+==10280==   total heap usage: 5 allocs, 5 frees, 1,955 bytes allocated
+==10280== 
+==10280== All heap blocks were freed -- no leaks are possible
+==10280== 
+==10280== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Aborted (core dumped)
